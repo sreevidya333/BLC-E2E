@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - newbang_forms</title>
+   
+    @Html.Partial("Partial_head")
+
+</head>
+<body>
+    @Html.Partial("_header");
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - newbang_forms - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+       @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
